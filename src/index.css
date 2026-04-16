@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #2e2723;
+  --bg-surface: #3a312c;
+  --bg-elevated: #453a33;
+
+  --accent-primary: #c46a3a;
+  --accent-soft: rgba(196, 106, 58, 0.12);
+
+  --text-primary: #f1e6da;
+  --text-secondary: #bfaf9f;
+  --text-disabled: #8c7b6f;
+
+  --border-subtle: rgba(255, 235, 220, 0.06);
+  --border-strong: rgba(255, 235, 220, 0.1);
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    Inter,
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+}
+
+body {
+  line-height: 1.45;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 16px 24px;
+}
+
+.home-shell {
+  background: #15110e;
+  border-radius: 24px;
+}
+
+.glass {
+  background: rgba(255, 230, 210, 0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 230, 210, 0.08);
+  border-radius: 8px;
+}
+
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-fade-in {
+  animation: homeFadeIn 420ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.home-card-enter {
+  animation: homeFadeIn 360ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes subscriptionToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subscriptionToastOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+}
+
+.subscription-toast-enter {
+  animation: subscriptionToastIn 220ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.subscription-toast-leave {
+  animation: subscriptionToastOut 260ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
