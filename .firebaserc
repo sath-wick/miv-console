@@ -1,23 +1,5 @@
 {
   "projects": {
     "default": "miv-console-dev"
-  },
-  "targets": {
-    "miv-console-dev": {
-      "hosting": {
-        "dev": ["miv-console-dev"]
-      }
-    },
-    "miv-console-prod": {
-      "hosting": {
-        "prod": ["miv-console-prod"]
-      }
-    },
-    "miv-console-v2": {
-      "hosting": {
-        "dev": ["miv-console-v2"],
-        "prod": ["miv-console-v2"]
-      }
-    }
   }
 }
